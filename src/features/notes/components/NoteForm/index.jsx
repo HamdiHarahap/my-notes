@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from '../../../../components/ui/Button';
 import InputGroup from '../../../../components/ui/Input';
-import TextArea from '../../../../components/ui/Textarea';
+import TextArea from '../../../../components/ui/TextArea';
 
 const NoteForm = (props) => {
 	const { onClose } = props;
