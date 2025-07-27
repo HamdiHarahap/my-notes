@@ -18,13 +18,11 @@ const NoteForm = (props) => {
 		}));
 	};
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-
+	const handleSubmit = () => {
 		const notes = JSON.parse(localStorage.getItem('notes')) || [];
 
 		const now = new Date();
-		const formatted = now.toLocaleDateString('id-ID', {
+		const formatted = now.toLocaleDateString('en-EN', {
 			day: 'numeric',
 			month: 'long',
 			year: 'numeric',
@@ -34,6 +32,7 @@ const NoteForm = (props) => {
 			id: Date.now(),
 			...note,
 			created_at: formatted,
+			is_archived: false,
 		};
 
 		notes.push(newNote);
